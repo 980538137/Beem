@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#222222"
+        android:fadingEdge="horizontal" />
+
+    <ListView
+        android:id="@+id/chat_messages"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:focusable="true"
+        android:padding="4dip"
+        android:smoothScrollbar="false"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#222222"
+        android:orientation="horizontal"
+        android:padding="8dip" >
+
+        <EditText
+            android:id="@+id/chat_input"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:cursorVisible="true"
+            android:hint="@string/chat_input_default_value"
+            android:imeOptions="actionSend|flagNoExtractUi"
+            android:inputType="textShortMessage|textAutoCorrect|textMultiLine|textCapSentences"
+            android:maxLines="5" />
+
+        <Button
+            android:id="@+id/chat_send_message"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/chat_send_message" />
+    </LinearLayout>
+
+</LinearLayout>
